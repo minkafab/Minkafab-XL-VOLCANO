@@ -3,5 +3,5 @@
 Características:
 * Volúmen de impresión: 500x320x400mm
 * Controlador: SKR V1.1
-* Drivers: TMC2209 UART
+* Drivers: TMC22xx Silenciosos
 * Software: Marlin 2.0
