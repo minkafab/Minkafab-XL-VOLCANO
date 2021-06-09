@@ -10,6 +10,8 @@
         "icon": "icon_ultimaker2",
         "platform": "Minkafab-XL-VOLCANO_platform.stl",
         "has_materials": true,
+        "has_machine_quality": true,
+        "quality_definition": "Minkafab-XL-VOLCANO",
         "machine_extruder_trains": {
             "0": "Minkafab-XL-VOLCANO_extruder_0"
         }
@@ -43,7 +45,7 @@
             "default_value": 0.4
         },
         "layer_height": {
-            "default_value": 0.15
+            "default_value": 0.3
         },
         "layer_height_0": {
             "default_value": 0.3
@@ -117,7 +119,7 @@
             "default_value": "G21 ; set units to millimeters\nG90 ; use absolute positioning\nM82 ; absolute extrusion mode\nM104 S{material_print_temperature_layer_0} ; set extruder temp\nM140 S{material_bed_temperature_layer_0} ; set bed temp\nM190 S{material_bed_temperature_layer_0} ; wait for bed temp\nM109 S{material_print_temperature_layer_0} ; wait for extruder temp\nG28 W ; home all without mesh bed level\nG34; Verify bed be ortogonal\nG29 ; Bed Leveling Bilinear\nG92 E0.0 ; reset extruder distance position\nG1 Y1.0 F5000.0 ; go outside print area\nG1 X460.0 F5000.0 ; intro line\nG1 F600 Z0.3; go down\nG1 X350.0 E28.0 F1000.0 ; intro line\nG1 F1200 E27.0; retract some material\nG92 E0.0 ; reset extruder distance position"
         },
         "machine_end_gcode": {
-            "default_value": "M104 S0 ; turn off extruder\nM140 S0 ; turn off heatbed\nG91; relative positioning\nG1 E-2 F2400; retract some filament a bit\nG1 Z0.5 E-1 X20.0 Y20.0 F6000; move z up a bit and retract filament even more\nM107 ; turn off fan\nG90; absolute positioning\nG1 X195 Y190; move X axis and push Y forward\nM84 ; disable motors\nM117 Minka 3D Lista..."
+            "default_value": "M104 S0 ; turn off extruder\nM140 S0 ; turn off heatbed\nG91; relative positioning\nG1 E-2 F2400; retract some filament a bit\nG1 Z0.5 E-1 X20.0 Y20.0 F6000; move z up a bit and retract filament even more\nM107 ; turn off fan\nG90; absolute positioning\nG1 X195 Y190; move X axis and push Y forward\nM117 Minka 3D Lista..."
         }
     }
 }
